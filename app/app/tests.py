@@ -18,7 +18,7 @@ class CalcTest(SimpleTestCase):
 class SubstractNumbers(SimpleTestCase):
     """   Test the calc module  """
 
-    def test_add(self):
+    def test_substract(self):
         """  Test the substract function """
         res = calc.subtract(5, 11)
         self.assertEqual(res, -6)
