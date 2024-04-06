@@ -1,9 +1,8 @@
-"""
-This file contains the tests for the app.   
-"""
+"""This file contains the tests for the app."""
 
 from django.test import SimpleTestCase
-from app import calc 
+from app import calc
+
 
 class CalcTest(SimpleTestCase):
     """Test the calc module"""
@@ -15,11 +14,11 @@ class CalcTest(SimpleTestCase):
         self.assertEqual(calc.add(-3, -8), -11)
         self.assertEqual(calc.add(3, -8), -5)
 
+
 class SubstractNumbers(SimpleTestCase):
-    """Test the calc module"""
+    """   Test the calc module  """
 
     def test_add(self):
-        """Test the substract function """
+        """  Test the substract function """
         res = calc.subtract(5, 11)
         self.assertEqual(res, -6)
-       
