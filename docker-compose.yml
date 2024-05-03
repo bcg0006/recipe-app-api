@@ -1,15 +1,12 @@
 # FILEPATH: /Users/bruno/django_api/recipe-app-api/docker-compose.yml
-
-version: '3.9'
-
 services:
   app:
     build:
       context: .
       args:
-        - DEV=true 
+        - DEV=true
     ports:
-      - "8000:8000"  
+      - "8000:8000"
     volumes:
       - ./app:/app
     command: >
@@ -23,8 +20,8 @@ services:
       - db
 
   db:
-    image: postgres:13-alpine 
-    volumes: 
+    image: postgres:13-alpine
+    volumes:
       - dev-db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=devdb
@@ -32,4 +29,4 @@ services:
       - POSTGRES_PASSWORD=changeme
 
 volumes:
-  dev-db-data:  
+  dev-db-data:
